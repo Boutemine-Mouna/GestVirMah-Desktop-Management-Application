@@ -1,0 +1,45 @@
+﻿<Controls:MetroWindow x:Class="GestVirMah.FenetrePret.AjouterSousType2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GestVirMah"
+        mc:Ignorable="d"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        Title="Ajouter Sous Type 2" Height="475.457" Width="382.253" HorizontalAlignment="Center" VerticalAlignment="Center"
+        ResizeMode="NoResize" WindowStartupLocation="CenterOwner"
+        GlowBrush="{DynamicResource AccentColorBrush}" BorderThickness="2"  BorderBrush="#FF119EDA" ShowInTaskbar="False">
+    <Controls:MetroWindow.Background>
+        <ImageBrush ImageSource="/GestVirMah;component/Images/plain-white-wallpaper.jpg"/>
+    </Controls:MetroWindow.Background>
+    <Grid x:Name="Type" Margin="0,0,0,1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Button HorizontalAlignment="Left" Margin="220,369,0,0" VerticalAlignment="Top" Width="116" Height="42" FontSize="14" Click="Button_Click_1" Background="White" BorderThickness="1">
+            <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="94">
+                <Rectangle Fill="Black" HorizontalAlignment="Center" Height="18" VerticalAlignment="Center" Width="18">
+                    <Rectangle.OpacityMask>
+                        <VisualBrush Stretch="Uniform" Visual="{StaticResource appbar_check}"/>
+                    </Rectangle.OpacityMask>
+                </Rectangle>
+                <Label Content="Confirmer" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12" Margin="5,0,0,0" FontFamily="/GestVirMah;component/Fonts/#Century Gothic" Width="70"/>
+            </WrapPanel>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="34,369,0,0" VerticalAlignment="Top" Width="116" Height="42" FontSize="14" Click="Button_Click" Background="White" BorderThickness="1">
+            <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Rectangle Fill="Black" HorizontalAlignment="Center" Height="18" VerticalAlignment="Center" Width="18">
+                    <Rectangle.OpacityMask>
+                        <VisualBrush Stretch="Uniform" Visual="{StaticResource appbar_cancel}"/>
+                    </Rectangle.OpacityMask>
+                </Rectangle>
+                <Label Content="Annuler" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12" Margin="5,0,0,0" FontFamily="/GestVirMah;component/Fonts/#Century Gothic"/>
+            </WrapPanel>
+        </Button>
+        <GroupBox Header="veuillez entrer le nom de ce nouveau type :" HorizontalAlignment="Left" Margin="21,121,0,0" VerticalAlignment="Top" Height="157" Width="329">
+            <TextBox x:Name="TextType" HorizontalAlignment="Left" Height="20" Margin="99,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        </GroupBox>
+
+    </Grid>
+</Controls:MetroWindow>

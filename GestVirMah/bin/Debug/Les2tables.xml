@@ -1,0 +1,30 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TableGlobal">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Référence" type="xs:string" minOccurs="0" />
+              <xs:element name="Titre" type="xs:string" minOccurs="0" />
+              <xs:element name="Quant" type="xs:int" minOccurs="0" />
+              <xs:element name="Prix_x0020_unit" type="xs:int" minOccurs="0" />
+              <xs:element name="Montant" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="detfourni">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CodeRC" type="xs:string" minOccurs="0" />
+              <xs:element name="MatFiscal" type="xs:int" minOccurs="0" />
+              <xs:element name="CodeBNP" type="xs:int" minOccurs="0" />
+              <xs:element name="AppFournisseur" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

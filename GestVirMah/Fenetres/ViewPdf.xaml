@@ -1,0 +1,21 @@
+﻿<Controls:MetroWindow
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:ee="http://schemas.microsoft.com/expression/2010/effects" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  xmlns:PdfViewer="clr-namespace:Syncfusion.Windows.PdfViewer;assembly=Syncfusion.PdfViewer.WPF"  mc:Ignorable="d" x:Class="GestVirMah.ViewPdf" 
+        xmlns:mpp="clr-namespace:MoonPdfLib;assembly=MoonPdfLib"
+        Title="NvDemande" Height="550" Width="778" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" GlowBrush="{DynamicResource AccentColorBrush}" BorderThickness="2"  BorderBrush="#FF119EDA">
+    <Controls:MetroWindow.Background>
+        <ImageBrush ImageSource="/GestVirMah;component/Images/plain-white-wallpaper.jpg"/>
+    </Controls:MetroWindow.Background>
+    <Grid>
+        <Button x:Name="manuelButton" HorizontalAlignment="Left" Margin="10,17,0,0" VerticalAlignment="Top"  Style="{DynamicResource MetroCircleButtonStyle}" Background="White" Cursor="Hand" Width="40" Height="40" Padding="1,1,1,0" BorderBrush="Gray" Click="manuelButton_Click">
+            <Rectangle Fill="Black" HorizontalAlignment="Center" Height="18" VerticalAlignment="Center" Width="18">
+                <Rectangle.OpacityMask>
+                    <VisualBrush Stretch="Uniform" Visual="{StaticResource appbar_printer_text}"/>
+                </Rectangle.OpacityMask>
+            </Rectangle>
+        </Button>
+        <WebBrowser x:Name="wb" HorizontalAlignment="Left" Height="437" Margin="19,71,0,0" VerticalAlignment="Top" Width="730"/>
+    </Grid>
+</Controls:MetroWindow>

@@ -1,0 +1,28 @@
+﻿<Controls:MetroWindow x:Class="GestVirMah.Fenetres.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        Title="Détails du fonctionnaire" Height="348.09" Width="362.463"
+		ResizeMode="NoResize" WindowStartupLocation="CenterOwner"
+        GlowBrush="{DynamicResource AccentColorBrush}" BorderThickness="2"  BorderBrush="#FF119EDA" ShowInTaskbar="False">
+	<Controls:MetroWindow.Background>
+		<ImageBrush ImageSource="/GestVirMah;component/Images/plain-white-wallpaper.jpg"/>
+	</Controls:MetroWindow.Background>
+    <Grid>
+        <Rectangle Fill="White" HorizontalAlignment="Left" Height="275.733" Margin="10,23,0,0" VerticalAlignment="Top" Width="342.463" Stroke="Gray"/>
+        <Label Content="Nom et Prénom:" HorizontalAlignment="Left" Margin="18,23,0,0" VerticalAlignment="Top" Width="145" FontSize="13.333" FontWeight="SemiBold"/>
+        <Label x:Name="mdd" Content="" HorizontalAlignment="Left" Margin="187,147,0,0" VerticalAlignment="Top" Width="158" FontSize="13.333"/>
+        <Label x:Name="NAM" Content="Nom avant mariage:" HorizontalAlignment="Left" Margin="18,63,0,0" VerticalAlignment="Top" Width="145" FontSize="13.333" FontWeight="SemiBold"/>
+        <Label x:Name="ddd" Content="" HorizontalAlignment="Left" Margin="187,105,0,0" VerticalAlignment="Top" Width="158" FontSize="13.333"/>
+        <Label Content="Date Départ définitif:" HorizontalAlignment="Left" Margin="18,105,0,0" VerticalAlignment="Top" Width="145" FontSize="13.333" FontWeight="SemiBold"/>
+        <Label x:Name="np" Content="" HorizontalAlignment="Left" Margin="187,23,0,0" VerticalAlignment="Top" Width="158" FontSize="13.333"/>
+        <Label x:Name="nm" Content="" HorizontalAlignment="Left" Margin="187,63,0,0" VerticalAlignment="Top" Width="158" FontSize="13.333"/>
+        <Label Content="Motif Départ définitif:" HorizontalAlignment="Left" Margin="18,147,0,0" VerticalAlignment="Top" Width="145" FontSize="13.333" FontWeight="SemiBold"/>
+        <Label Content="Date Départ Temporaire:" HorizontalAlignment="Left" Margin="18,187,0,0" VerticalAlignment="Top" FontSize="13.333" FontWeight="SemiBold"/>
+        <Label Content="Motif  Départ Temporaire:" HorizontalAlignment="Left" Margin="18,266,0,0" VerticalAlignment="Top" FontSize="13.333" FontWeight="SemiBold"/>
+        <Label x:Name="ddt" Content="" HorizontalAlignment="Left" Margin="187,187,0,0" VerticalAlignment="Top" Width="158" FontSize="13.333"/>
+        <Label x:Name="mdt" Content="" HorizontalAlignment="Left" Margin="187,228,0,0" VerticalAlignment="Top" Width="158" FontSize="13.333"/>
+        <Label Content="Date Retour Temporaire:" HorizontalAlignment="Left" Margin="18,228,0,0" VerticalAlignment="Top" FontSize="13.333" FontWeight="SemiBold"/>
+        <Label x:Name="drt" Content="" HorizontalAlignment="Left" Margin="187,266,0,0" VerticalAlignment="Top" Width="158" FontSize="13.333"/>
+    </Grid>
+</Controls:MetroWindow>

@@ -1,0 +1,106 @@
+﻿<Controls:MetroWindow
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="GestVirMah.UpdateFonctionrList"
+	x:Name="Window"
+	xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+	Title="Mettre à jour la liste des fonctionnaires"
+	Width="560" Height="490"
+	ResizeMode="NoResize" WindowStartupLocation="CenterOwner"
+    GlowBrush="{DynamicResource AccentColorBrush}" BorderThickness="2"  BorderBrush="#FF119EDA" ShowInTaskbar="False">
+    <Controls:MetroWindow.Background>
+        <ImageBrush ImageSource="/GestVirMah;component/Images/plain-white-wallpaper.jpg"/>
+    </Controls:MetroWindow.Background>
+
+    <Grid x:Name="LayoutRoot">
+        <Button RenderTransformOrigin="0.5,0.5" BorderBrush="#FF1C79D6" BorderThickness="1" x:Name="Parc" HorizontalAlignment="Left" Margin="21,61.893,0,0" VerticalAlignment="Top" Click="Parc_Click" Cursor="Hand" Focusable="False">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF" Offset="0.0"/>
+                    <GradientStop Color="#EEE" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Rectangle Fill="Black" HorizontalAlignment="Center" Height="18" VerticalAlignment="Center" Width="18">
+                    <Rectangle.OpacityMask>
+                        <VisualBrush Stretch="Uniform" Visual="{StaticResource appbar_folder_open}"/>
+                    </Rectangle.OpacityMask>
+                </Rectangle>
+                <Label Content="Parcourir" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12" Margin="5,0,0,0" FontFamily="/GestVirMah;component/Fonts/#Century Gothic" Padding="10,2"/>
+            </WrapPanel>
+        </Button>
+        <Button RenderTransformOrigin="0.5,0.5" BorderBrush="#FF1C79D6" BorderThickness="1" HorizontalAlignment="Left" Margin="430.9,61.893,0,0" VerticalAlignment="Top" Click="Button_Click" Padding="10,2" Cursor="Hand" Focusable="False">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF" Offset="0.0"/>
+                    <GradientStop Color="#EEE" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Rectangle Fill="Black" HorizontalAlignment="Center" Height="18" VerticalAlignment="Center" Width="18">
+                    <Rectangle.OpacityMask>
+                        <VisualBrush Stretch="Uniform" Visual="{StaticResource appbar_page_solid_move}"/>
+                    </Rectangle.OpacityMask>
+                </Rectangle>
+                <Label Content="Importer" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12" Margin="5,0,0,0" FontFamily="/GestVirMah;component/Fonts/#Century Gothic"/>
+            </WrapPanel>
+        </Button>
+        <TextBox x:Name="ChemainFile" HorizontalAlignment="Left" Height="30.713" TextWrapping="Wrap" VerticalAlignment="Top" Width="274" Margin="142.443,61.893,0,0" RenderTransformOrigin="0.488,-0.269" FontSize="13.333"/>
+        <GroupBox Header="Fonctionnaires" HorizontalAlignment="Left" Margin="21,108,0,0" VerticalAlignment="Top" Height="290" Width="514" Background="#CC2C3276" BorderBrush="#CC2C3276">
+            <DataGrid x:Name="tabFonct2" ItemsSource="{Binding}" AutoGenerateColumns="true" IsReadOnly="True" HorizontalAlignment="Left" VerticalAlignment="Top" Height="252" Width="504" MouseDoubleClick="tabFonct2_MouseDoubleClick" Margin="0,0,-2,-0.96">
+                <!---->
+                            <DataGrid.Columns>
+                                                               
+                                <DataGridTextColumn Header="Matricule" Width="100"  Binding="{Binding Matricule}"/>
+                                <DataGridTextColumn Header="Nom" Width="80" Binding="{Binding Nom}"/>
+                                <DataGridTextColumn Header="Prenom" Width="80" Binding="{Binding Prenom}"/>
+                                <DataGridTextColumn Header="Date Recrutement" Width="120" Binding="{Binding Date, StringFormat={}{0:dd/MM/yyyy}}"/>
+                                <DataGridTextColumn Header="Telephone" Width="100" Binding="{Binding Telephone}"/>
+                                <DataGridTextColumn Header="E-mail" Width="120" Binding="{Binding Email}"/>
+                                <DataGridTextColumn Header="Compte" Width="80" Binding="{Binding CompteFonct}"/>
+                                <DataGridTextColumn Header="Banque\CCP" Width="80" Binding="{Binding CodeBanque}"/>
+                                <DataGridTextColumn Header="StiFam" Width="80" Binding="{Binding SitFam}"/>
+                                <DataGridTextColumn Header="Adresse" Width="80" Binding="{Binding AdresseFonct}"/>
+                                <DataGridTextColumn Header="Fonction" Width="80" Binding="{Binding FonctionFonct}"/>
+                                <DataGridTextColumn Header="Grade" Width="80" Binding="{Binding GradeFonct}"/>
+                                                    
+
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+                    </GroupBox>
+                    <TextBox x:Name="NomTab" HorizontalAlignment="Left" Height="23" Margin="392,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden" />
+                    <Button RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Margin="421,417,0,0" VerticalAlignment="Top" Click="Button_Click_1" BorderBrush="#FF1C79D6" BorderThickness="1" Padding="10,2" Cursor="Hand" IsDefault="True">
+						<Button.Background>
+        					<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+        						<GradientStop Color="#FFF" Offset="0.0"/>
+        						<GradientStop Color="#EEE" Offset="1.0"/>
+        					</LinearGradientBrush>
+        				</Button.Background>
+                    	<WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    		<Rectangle Fill="Black" HorizontalAlignment="Center" Height="18" VerticalAlignment="Center" Width="18">
+                    			<Rectangle.OpacityMask>
+                    				<VisualBrush Stretch="Uniform" Visual="{StaticResource appbar_save}"/>
+                    			</Rectangle.OpacityMask>
+                    		</Rectangle>
+                    		<Label Content="Enregistrer" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12" Margin="5,0,0,0" FontFamily="/GestVirMah;component/Fonts/#Century Gothic"/>
+                    	</WrapPanel>
+					</Button>
+                    <Button RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Margin="21,20.85,0,0" VerticalAlignment="Top" Click="Button_Click_2" BorderBrush="#FF1C79D6" BorderThickness="1" Padding="10,2" Cursor="Hand" Focusable="False">
+						<Button.Background>
+        					<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+        						<GradientStop Color="#FFF" Offset="0.0"/>
+        						<GradientStop Color="#EEE" Offset="1.0"/>
+        					</LinearGradientBrush>
+        				</Button.Background>
+                    	<WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    		<Rectangle Fill="Black" HorizontalAlignment="Center" Height="18" VerticalAlignment="Center" Width="18">
+                    			<Rectangle.OpacityMask>
+                    				<VisualBrush Stretch="Uniform" Visual="{StaticResource appbar_edit}"/>
+                    			</Rectangle.OpacityMask>
+                    		</Rectangle>
+                    		<Label Content="Modifier manuellement" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12" Margin="5,0,0,0" FontFamily="/GestVirMah;component/Fonts/#Century Gothic"/>
+                    	</WrapPanel>
+					</Button>
+	</Grid>
+</Controls:MetroWindow>

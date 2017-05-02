@@ -1,0 +1,19 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:chart="http://schemas.syncfusion.com/wpf" x:Class="GestVirMah.FenetrePret.StatistiqueDemVir"
+        Title="Statistiques Prêts" Height="629.851" Width="801.596">
+    <Grid>
+
+        <Grid Margin="0,0,27,10">
+
+            <chart:SfChart x:Name="chart" HorizontalAlignment="Left" VerticalAlignment="Top" AreaBorderBrush="#8e8e8e" Background="White" Height="569" Width="762" Margin="0,10,0,-10" >
+                <chart:SfChart.Header>
+                    <TextBlock FontSize="22"   Foreground="Black" FontFamily="Segoe UI" Margin="0,-10,0,30"><Run Text="Nombre de demandes pour les paramètres sélectionnés"/></TextBlock>
+                </chart:SfChart.Header>
+            </chart:SfChart>
+
+        </Grid>
+
+    </Grid>
+</Window>

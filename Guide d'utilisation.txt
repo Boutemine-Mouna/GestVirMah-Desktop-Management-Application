@@ -1,0 +1,43 @@
+1 les demandes
+-type1
+-type2
+-remboursement anticipé
+
+2 les traitements de type 2
+
+1*bon de commande global
+-creer le bon de commande 
+-effacement des dettes 
+2*les fournisseurs
+-ajouter un fournisseur 
+-modifier un fournisseur
+    
+3 les precomptes
+-afficher
+-appliquer les precomptes
+-imprimer
+
+4 les prets et les produits
+
+1*a sous types
+-visualiser la liste des types existant
+-ajouter un sous type
+
+2*b produits
+-visualiser la listes des produits disponibles
+-ajouter un produit
+-modifier un produit(double click sur le produit dans datagrid)
+
+5 les virements et le Pv//sidahmed
+
+
+6 l'historique
+-filtrage par motif
+-filtrage par periode
+-filtrage par type
+-filtrage par personne 
+-avec la possibilité d'afficher l'historique de chaque demande
+
+7 statistique //Rania peut te donner des details sur ca 
+-a Virement 
+-b demande 

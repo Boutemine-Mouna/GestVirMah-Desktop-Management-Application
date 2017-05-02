@@ -1,0 +1,72 @@
+﻿<Controls:MetroWindow x:Class="GestVirMah.FenetrePret.AjoutFourni"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GestVirMah"
+        mc:Ignorable="d"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        Title="Ajouter Fournisseur" Height="475.457" Width="382.253" HorizontalAlignment="Center" VerticalAlignment="Center"
+        ResizeMode="NoResize" WindowStartupLocation="CenterOwner"
+        GlowBrush="{DynamicResource AccentColorBrush}" BorderThickness="2"  BorderBrush="#FF119EDA" ShowInTaskbar="False">
+    <Controls:MetroWindow.Resources>
+        <Storyboard x:Key="blink">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="nameBox">
+                <EasingColorKeyFrame KeyTime="0" Value="Red"/>
+                <EasingColorKeyFrame KeyTime="0:0:0.1" Value="White"/>
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="Red"/>
+                <EasingColorKeyFrame KeyTime="0:0:0.7" Value="White"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+    </Controls:MetroWindow.Resources>
+    <Controls:MetroWindow.Background>
+        <ImageBrush ImageSource="/GestVirMah;component/Images/plain-white-wallpaper.jpg"/>
+    </Controls:MetroWindow.Background>
+    <Grid x:Name="Fournis">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="ValiderFournis" Margin="221,393,31,10" FontSize="16" FontWeight="Bold" Click="ValiderFournis_Click" Background="White"  BorderThickness="1" BorderBrush="#FFA29F9F">
+            <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="94">
+                <Rectangle Fill="Black" HorizontalAlignment="Center" Height="18" VerticalAlignment="Center" Width="18">
+                    <Rectangle.OpacityMask>
+                        <VisualBrush Stretch="Uniform" Visual="{StaticResource appbar_check}"/>
+                    </Rectangle.OpacityMask>
+                </Rectangle>
+                <Label Content="Confirmer" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12" Margin="5,0,0,0" FontFamily="/GestVirMah;component/Fonts/#Century Gothic" Width="70"/>
+            </WrapPanel>
+        </Button>
+        <Button x:Name="RetourFournis" HorizontalAlignment="Left" Margin="36,393,0,0" VerticalAlignment="Top" Width="121" Height="39" FontSize="15" FontWeight="Bold" Click="RetourFournis_Click" Background="White" BorderBrush="#FFB7B9BB"  BorderThickness="1">
+            <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Rectangle Fill="Black" HorizontalAlignment="Center" Height="18" VerticalAlignment="Center" Width="18">
+                    <Rectangle.OpacityMask>
+                        <VisualBrush Stretch="Uniform" Visual="{StaticResource appbar_cancel}"/>
+                    </Rectangle.OpacityMask>
+                </Rectangle>
+                <Label Content="Annuler" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12" Margin="5,0,0,0" FontFamily="/GestVirMah;component/Fonts/#Century Gothic"/>
+            </WrapPanel>
+        </Button>
+        <Label Content="Nom de Fournisseur :" HorizontalAlignment="Left" Margin="24,80,0,0" VerticalAlignment="Top" FontSize="15" Width="166" RenderTransformOrigin="0.518,-0.086"/>
+        <Label Content="Code RC :" HorizontalAlignment="Left" Margin="48,126,0,0" VerticalAlignment="Top" FontSize="15" Width="76"/>
+        <Label Content="Code BNP :" HorizontalAlignment="Left" Margin="48,170,0,0" VerticalAlignment="Top" FontSize="15" RenderTransformOrigin="-0.74,0.761"/>
+        <Label Content="Matricule Fiscal :" HorizontalAlignment="Left" Margin="24,215,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.601,-1.189" FontSize="15" Width="127"/>
+        <Label Content="Son propre Apport :" HorizontalAlignment="Left" Margin="15,256,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.55,0.215" FontSize="15"/>
+        <Label Content="Raison Sociale :" HorizontalAlignment="Left" Margin="39,301,0,0" VerticalAlignment="Top" FontSize="15"/>
+        <Label Content="type de fournisseur :" HorizontalAlignment="Left" Margin="24,45,0,0" VerticalAlignment="Top" FontSize="15"/>
+        <Label Content="Sa période  :" HorizontalAlignment="Left" Margin="48,351,0,0" VerticalAlignment="Top" FontSize="15" Height="37"/>
+        <GroupBox Header="LES Informations Du fournisseur :" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top" Height="378" Width="347">
+            <Grid HorizontalAlignment="Left" Height="368" Margin="9,-21,-12,-8" VerticalAlignment="Top" Width="338">
+                <ComboBox x:Name="ComboType" HorizontalAlignment="Left" Margin="153,22,0,0" VerticalAlignment="Top" Width="162"/>
+                <TextBox x:Name="TextNom"  Controls:TextBoxHelper.Watermark="Fournisseur " HorizontalAlignment="Left" Height="23" Margin="153,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162"/>
+                <TextBox x:Name="codeRC"  Controls:TextBoxHelper.Watermark="Code RC" HorizontalAlignment="Left" Height="23" Margin="153,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" TextChanged="codeRC_TextChanged"/>
+                <TextBox x:Name="TextCodebnp"  Controls:TextBoxHelper.Watermark="Code BNP " HorizontalAlignment="Left" Height="23" Margin="153,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" TextChanged="TextCodebnp_TextChanged"/>
+                <TextBox x:Name="TextMF"  Controls:TextBoxHelper.Watermark="Matricule Fiscal " HorizontalAlignment="Left" Height="23" Margin="153,197,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" TextChanged="TextMF_TextChanged"/>
+                <TextBox x:Name="TextApport"  Controls:TextBoxHelper.Watermark="Apport " HorizontalAlignment="Left" Height="23" Margin="153,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" TextChanged="TextApport_TextChanged"/>
+                <TextBox x:Name="TextRaison"  Controls:TextBoxHelper.Watermark="Raison Sociale " HorizontalAlignment="Left" Height="28" Margin="153,285,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162"/>
+                <TextBox x:Name="TextPeriode"  Controls:TextBoxHelper.Watermark="Période " HorizontalAlignment="Left" Height="28" Margin="153,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" TextChanged="TextPeriode_TextChanged"/>
+            </Grid>
+        </GroupBox>
+
+    </Grid>
+</Controls:MetroWindow>
